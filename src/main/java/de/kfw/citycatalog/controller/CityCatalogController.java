@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import de.kfw.citycatalog.controller.input.NewCityInput;
 import de.kfw.citycatalog.dto.CityDto;
 import de.kfw.citycatalog.service.CityService;
 
 @Controller
-@RequestMapping("/cities")
+@RequestMapping("/cities"+"${userBucket.path}")
 public class CityCatalogController {
 
     @Autowired
